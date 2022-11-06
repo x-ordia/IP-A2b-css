@@ -3,6 +3,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bipolar</title>
+    <style>
+      body {
+        margin: 0%;
+        background-image: linear-gradient(ghostwhite,grey);
+      }
+      #nav {
+        background-color: #808080;
+        color: aqua;
+        /* padding-top: 20px;
+        padding-bottom: 20px; */
+        height: 53px;
+      }
+
+      #nav a {
+        float: left;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-decoration: none;
+        padding-top: 13px;
+        color: aliceblue;
+        font-size: 20px;
+        border-style: solid;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        background-color:darkgrey;
+        height: 40px;
+      }
+      #nav a:hover {
+        float: left;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-decoration: none;
+        color:dimgray ;
+        font-size: 20px;
+        border-style: solid;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        background-color:ghostwhite;
+        height: 40px;
+      }
+
+      #big {
+        border-style: solid;
+        border-radius: 300px;
+        border-width: 0px;
+      }
+
+      @keyframes lines10 {
+        from{width: 10%}
+        to{width: 100%;}
+      }
+      @keyframes lines30 {
+        from{width: 30%}
+        to{width: 80%;}
+      }
+      @keyframes lines80 {
+        from{width: 80%}
+        to{width: 30%;}
+      }
+      @keyframes lines100 {
+        from{width: 100%}
+        to{width: 10%;}
+      }
+      #ten {
+        height: 4px;
+        margin-bottom: 2px;
+        background-color:lightslategray;
+        align-self: center;
+        animation-name: lines10;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      #thirty {
+        height: 4px;
+        margin-bottom: 2px;
+        background-color:lightslategray;
+        align-self: center;
+        animation-name: lines30;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      #eighty {
+        height: 4px;
+        margin-bottom: 2px;
+        background-color:lightslategray;
+        align-self: center;
+        animation-name: lines80;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      #hundred {
+        height: 4px;
+        margin-bottom: 2px;
+        background-color:lightslategray;
+        align-self: center;
+        animation-name: lines100;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      td img {
+        border-width: 0px;
+        border-style: solid;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+
+      form {
+        background-color: honeydew;
+        border-width: 0px;
+        border-style: solid;
+        border-radius: 20px;
+      }
+    </style>
 </head>
 <body>
     <center>
@@ -10,36 +136,28 @@
             <img src="images/bipolar.png" alt="Bipolar">
         </header>
         <hr>
-        <nav align=left>
-          &emsp;&emsp;&emsp;
-          <a href="./shirtSale.html">Home</a>
-          &emsp;&emsp;&emsp;
+        <br>
+        <div id="nav">
+          <a href="./shirtSale.html" style="margin-left:15px;">Home</a>
           <a href="./buyPage.html">My Cart</a>
-          &emsp;&emsp;&emsp;
           <a href="#">Concerts</a>
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
-          <a href="#">Music</a>
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          <a href="#">Login</a>
-          &emsp;&emsp;&emsp;
+          <a href="#" style="margin-left:335px;">Music</a>
+          <a href="#" style="margin-left:345px;">Login</a>
           <a href="#">Register</a>
-          &emsp;&emsp;&emsp;
           <a href="#">Logout</a>
-        </nav>
-        <hr width=10%>
-        <hr width=30%>
-        <hr width=50%>
-        <hr width=70%>
-        <hr>
-        <img src="images/intro.png" alt="concert" width=100%>
-        <hr>
-        <hr width=90%>
-        <hr width=70%>
-        <hr width=50%>
-        <hr width=30%>
-        <hr width=10%>
+        </div>
+        <br><br>
+        <div id="ten"></div>
+        <div id="thirty"></div>
+        <div width="50%"></div>
+        <div id="eighty"></div>
+        <div id="hundred"></div>
+        <img src="images/intro.png" alt="concert" width=100% id="big">
+        <div id="hundred"></div>
+        <div id="eighty"></div>
+        <div width="50%"></div>
+        <div id="thirty"></div>
+        <div id="ten"></div>
         <br>
         <section>
           <h3><b>Personalise your official merch!</b></h3>
@@ -148,8 +266,7 @@
           <form action="" method="get" align=center>
               <label>Delivery Date:</label>
               <input type="date" name="date" id="date">
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              Address:
+              <label>Address:</label>
               <textarea name="address" id="address" cols="50" rows="1"></textarea>
           </form>
         </fieldset>
